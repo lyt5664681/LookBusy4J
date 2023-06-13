@@ -21,6 +21,9 @@ public class CPUBusiHandler {
     @Value("${busy.cpu-polling.enable:false}")
     private boolean enable;
 
+    @Value("${busy.index:100}")
+    private int busiIndex;
+
     @Scheduled(fixedDelayString = "${busy.cpu-polling.time:50000}")
     public void load(){
         if(!enable) {
@@ -40,7 +43,7 @@ public class CPUBusiHandler {
     }
 
     public static void consumeCPU() {
-        int numIterations = 100; // 迭代次数
+        int numIterations = 10*100; // 迭代次数
 
         for (int i = 0; i < numIterations; i++) {
             BigInteger[] numbers = new BigInteger[1000];
@@ -59,7 +62,7 @@ public class CPUBusiHandler {
         Random random = new Random();
 
         // 随机生成一个大数，限定位数范围
-        int numDigits = 20; // 大数位数
+        int numDigits = 80; // 大数位数
         StringBuilder sb = new StringBuilder(numDigits);
         sb.append(random.nextInt(9) + 1); // 第一位不能为0
         for (int i = 1; i < numDigits; i++) {

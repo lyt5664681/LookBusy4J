@@ -2,11 +2,12 @@ server:
   port: 8282
 
 busy:
+  index: 100
   thread:
-    count: 10
+    count: 1000
   cpu-polling:
     enable: true
-    time: 50000
+    time: 1000
   mem-polling:
     enable: true
-    time: 50000
+    time: 1000
