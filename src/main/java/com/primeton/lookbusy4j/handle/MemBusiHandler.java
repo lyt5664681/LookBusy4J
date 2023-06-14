@@ -50,7 +50,7 @@ public class MemBusiHandler {
                 memoryList.add(data);
             }
         } catch (OutOfMemoryError e) {
-            System.out.println("consumeMEM limit out1");
+            System.out.println("consumeMEM limit out2");
         }
         System.out.println("Memory occupation finished.1");
     }
