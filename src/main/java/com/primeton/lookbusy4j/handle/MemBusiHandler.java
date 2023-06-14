@@ -52,7 +52,7 @@ public class MemBusiHandler {
         } catch (OutOfMemoryError e) {
             System.out.println("consumeMEM limit out1");
         }
-        System.out.println("Memory occupation finished.");
+        System.out.println("Memory occupation finished.1");
     }
 
     private static byte[] generateRandomData() {
