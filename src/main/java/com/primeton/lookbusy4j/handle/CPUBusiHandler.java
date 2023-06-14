@@ -29,7 +29,7 @@ public class CPUBusiHandler {
         if(!enable) {
             return;
         }
-        System.out.println("cpu begin load");
+        System.out.println("cpu begin load2");
         ThreadFactory threadFactory = ThreadFactoryBuilder.create()
                 .setNamePrefix("CPU-ThreadPool-")
                 .build();
